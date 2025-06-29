@@ -1,6 +1,9 @@
-MoveMate - Logistics & Shipment Tracking App
-MoveMate is a high-fidelity Flutter application that provides a comprehensive user experience for shipping and tracking parcels. This project is a complete mobile translation of a popular Dribbble design, showcasing Flutter's power in creating beautiful, animated, and functional user interfaces.
-The app covers the entire user journey, from browsing shipment history and calculating costs to creating a new shipment, live tracking on a map, and rating the service post-delivery.
+MoveMate - A Flutter Logistics App
+MoveMate is a feature-rich logistics and shipment tracking application built with Flutter. This project serves as a high-fidelity mobile translation of a popular Dribbble design, demonstrating how to build complex, beautiful, and animated user interfaces that are ready for real-world use.
+The application covers a complete user journey, from tracking past shipments and calculating costs to creating new ones with live map integration, and finally rating the delivery service.
+<p align="center">
+<img src="https://i.ibb.co/L5w2t3Y/movemate-promo.png" alt="MoveMate App Showcase" width="800"/>
+</p>
 Features
 High-Fidelity UI/UX: A pixel-perfect implementation of the original design, focusing on clean layouts, brand-consistent colors, and intuitive user flows.
 Fluid Animations: Smooth page transitions, staggered list animations, and subtle micro-interactions that enhance the user experience.
@@ -23,95 +26,72 @@ Automatically detects and displays the user's current location.
 Uses geocoding to convert map coordinates into human-readable addresses.
 Post-Delivery Rating System: A user-friendly interface to rate the delivery service after completion.
 Authentication Flow: A basic login/logout flow to demonstrate session management.
-Screenshots & App Flow
-Home Screen & Live Location	Shipment History (with Filter)
-Shipment Creation Flow	Live Tracking & Details
-Profile & Settings	Rating System
-Tech Stack & Packages
-Framework: Flutter
-Language: Dart
-State Management: StatefulWidget / setState (suitable for this project's scale)
-Key Packages:
+Tech Stack & Key Packages
+Framework: Flutter 3.x.x
+Language: Dart 3.x.x
+State Management: StatefulWidget & setState
+Packages:
 google_fonts: For beautiful, consistent typography.
 flutter_staggered_animations: For elegant list animations.
 geolocator: To get the device's current GPS coordinates.
 geocoding: To convert coordinates into addresses.
 google_maps_flutter: For displaying interactive maps.
 flutter_polyline_points: To draw routes on the map.
-lottie: For high-quality, complex vector animations (e.g., success checkmark).
+lottie: For high-quality, complex vector animations.
 Getting Started
-Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
+This project is a starting point for a Flutter application. To get a copy of the project up and running on your local machine, follow the setup instructions below.
 Prerequisites
-You must have Flutter installed on your system. For instructions, see the official Flutter documentation.
-An IDE like VS Code or Android Studio with the Flutter plugin.
+You must have the Flutter SDK installed on your system.
+An IDE like VS Code or Android Studio with the Flutter & Dart plugins.
 A Google Maps API Key.
-Setup and Installation
-1. Get a Google Maps API Key:
-   This project uses Google Maps for live tracking and address selection. You need to enable the following APIs in your Google Cloud Console project:
-   Maps SDK for Android
-   Maps SDK for iOS
-   Directions API
-   Follow the official guides to create an API key and enable these services: Get an API Key.
-2. Clone the Repository:
-   Generated bash
-   git clone https://github.com/your-username/movemate.git
-   cd movemate
-   Use code with caution.
-   Bash
-3. Install Dependencies:
-   Generated bash
-   flutter pub get
-   Use code with caution.
-   Bash
-4. Configure API Keys:
-   For Android:
-   Open the file android/app/src/main/AndroidManifest.xml.
-   Find the line <!-- THIS IS THE LINE YOU MUST ADD/EDIT -->.
-   Inside the <application> tag, replace "YOUR_GOOGLE_MAPS_API_KEY" with your actual API key:
-   Generated xml
-   <meta-data android:name="com.google.android.geo.API_KEY"
-   android:value="YOUR_GOOGLE_MAPS_API_KEY_HERE"/>
-   Use code with caution.
-   Xml
-   For iOS:
-   Open the file ios/Runner/AppDelegate.swift.
-   Add import GoogleMaps at the top.
-   Inside the application function, add the following line, replacing the placeholder with your key:
-   Generated swift
-   GMSServices.provideAPIKey("YOUR_GOOGLE_MAPS_API_KEY_HERE")
-   Use code with caution.
-   Swift
-   In the App Code:
-   Open the file lib/screens/tracking_order_screen.dart.
-   Find the constant googleApiKey and replace the placeholder value with your key.
-5. Run the Application:
-   Connect a device or start an emulator and run the app:
-   Generated bash
-   flutter run
-   Use code with caution.
-   Bash
-   Project Structure
-   The project follows a standard feature-based structure to keep the code organized and scalable.
-   Generated code
-   lib/
-   ├── main.dart             # App entry point and theme configuration
-   ├── screens/              # All the individual screens of the app
-   │   ├── login_screen.dart
-   │   ├── main_screen.dart      # The main screen with bottom navigation
-   │   ├── home_screen.dart
-   │   ├── calculate_screen.dart
-   │   ├── shipment_history_screen.dart
-   │   ├── profile_screen.dart
-   │   ├── tracking_order_screen.dart
-   │   ├── address_details_screen.dart
-   │   ├── delivery_details_screen.dart
-   │   └── ... (and all other screens)
-   ├── utils/                # Utility files
-   │   ├── colors.dart         # App-wide color constants
-   │   └── custom_page_route.dart # Custom page transition animations
-   └── assets/               # Static assets
-   ├── images/             # All PNG, JPG assets
-   └── animations/         # Lottie JSON animation files
-   Use code with caution.
-   Author
-   [Your Name] - [Your Portfolio/GitHub Link]
+Installation & Setup
+1. Clone the Repository:
+Generated bash
+git clone https://github.com/your-username/movemate.git
+cd movemate
+Use code with caution.
+Bash
+2. Install Dependencies:
+Run the following command from the root of the project directory:
+Generated bash
+flutter pub get
+Use code with caution.
+Bash
+3. Configure Google Maps API Key:
+This project uses Google Maps for live tracking and address selection. You need to enable the following APIs in your Google Cloud Console project:
+Maps SDK for Android
+Maps SDK for iOS
+Directions API
+Follow the official guides to create an API key: Get an API Key.
+Once you have your key:
+For Android:
+Open the file android/app/src/main/AndroidManifest.xml.
+Inside the <application> tag, replace the placeholder with your actual API key:
+Generated xml
+<meta-data android:name="com.google.android.geo.API_KEY"
+       android:value="YOUR_GOOGLE_MAPS_API_KEY_HERE"/>
+Use code with caution.
+Xml
+For iOS:
+Open the file ios/Runner/AppDelegate.swift.
+Add import GoogleMaps at the top.
+Inside the application function, add the following line, replacing the placeholder:
+Generated swift
+GMSServices.provideAPIKey("YOUR_GOOGLE_MAPS_API_KEY_HERE")
+Use code with caution.
+Swift
+In the App Code:
+Open the files that use the API key (e.g., lib/screens/tracking_order_screen.dart).
+Find the constant googleApiKey and replace the placeholder value with your key.
+4. Run the Application:
+Make sure a device is connected or an emulator is running, then execute:
+Generated bash
+flutter run
+Use code with caution.
+Bash
+A few resources to get you started if this is your first Flutter project:
+Lab: Write your first Flutter app
+Cookbook: Useful Flutter samples
+For help getting started with Flutter development, view the
+online documentation, which offers tutorials,
+samples, guidance on mobile development, and a full API reference.

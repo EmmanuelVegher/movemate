@@ -6,7 +6,7 @@ import 'package:movemate/screens/parcel_ready_screen.dart';
 import 'package:movemate/utils/colors.dart';
 
 // IMPORTANT: Replace with your actual Google Maps API Key
-const String googleApiKey = "AIzaSyDZfXKWtLVdhiWjy_t7HLajo2k5X9UHITY";
+const String googleApiKey = "YOUR_GOOGLE_MAPS_API_KEY_HERE";
 
 
 class TrackingOrderScreen extends StatefulWidget {
